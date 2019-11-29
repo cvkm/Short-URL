@@ -1,0 +1,83 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./font/Montserrat-Hairline.otf);
+  }
+
+body {
+    text-align: center;
+}
+h1 {
+    font-family: Montserrat;
+    color:rgb(10, 107, 110);
+}
+.alert {
+    color:rgb(240, 100, 100);
+    font-family: Montserrat;
+    font-weight:bolder;
+}
+table{
+    position: relative;
+    left:38.9%;
+    margin-top:20px;
+    font-family: Montserrat;
+    font-weight: bolder;
+}
+
+.submit {
+    background-color: rgb(245, 97, 29);
+    border:none;
+    width: 12%;
+    height:40px;
+    border-radius: 5px;
+    outline: 0;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
+    margin-left:18%;
+}
+.submit:hover{
+    cursor: pointer;
+}
+.submit::-moz-focus-inner {
+    border: 0;
+}
+
+.Home {
+    background-color: rgb(49, 199, 245);
+    border:none;
+    width: 12%;
+    height:40px;
+    border-radius: 5px;
+    outline: 0;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-right:18%;
+    position: relative;
+    bottom:39px;
+}
+.Home:hover{
+    cursor: pointer;
+    background-color: rgb(34, 166, 206);
+}
+.Home::-moz-focus-inner {
+    border: 0;
+  }
+
+.Text {
+    font-family: Montserrat;
+    font-weight:bolder;
+    text-align: center;
+    border: 1px solid rgb(49, 199, 245);
+    border-radius: 5px;
+    height:30px;
+    width:30%;
+}
+.Text::placeholder{
+    color:rgb(0, 140, 255);
+}
+.Text:invalid {
+    box-shadow: none;
+}
+.Text:focus {
+    transform: scale(1.01)
+}

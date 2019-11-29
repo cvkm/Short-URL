@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Authorization
+        </title>
+        <link rel = "stylesheet" href = "{{url_for('static', filename = 'css/auth.css')}}"
+    </head>
+    <body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+        <div class="alert" role="alert">
+        {{message}}
+        </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+        <h1>ADMIN PANEL</h1>
+        <form action="{{ url_for('short.auth') }}" method = "POST">
+        <input type="text" class="Text" name = "Username" placeholder="Username" required/><br /><br />
+        <input type="password" class="Text" name = "Password" placeholder="Password" required/><br />
+        <input type = "submit" class = "submit" value ="Login" />
+        </form>
+        <input type = "button" value = "Home"  class = "Home" onclick = "href = location.pathname = '/'"/>
+    </body>
+
+
+</html>

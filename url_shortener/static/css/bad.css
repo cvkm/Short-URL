@@ -1,0 +1,9 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./font/Montserrat-Hairline.otf);
+  }
+
+h1 {
+    font-family: Montserrat;
+    font-weight: bold;
+}

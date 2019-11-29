@@ -1,0 +1,91 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./font/Montserrat-Hairline.otf);
+  }
+@font-face {
+    font-family: MontserratH;
+     src: url(./font/Montserrat-UltraLight.otf);
+    }
+body {
+    text-align: center;
+    /* background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* background-image: linear-gradient(-145deg, rgb(255, 255, 255), rgb(213, 245, 247)); */
+}
+h1, h2 {
+    font-family: Montserrat;
+    color:rgb(10, 107, 110);
+}
+
+.alert {
+    color:rgb(235, 63, 63);
+    font-family: Montserrat;
+    font-weight:bolder;
+}
+
+table{
+    position: relative;
+    left:18%;
+    margin-top:40px;
+    table-layout: fixed;
+    word-wrap: break-word;
+    width:65%;
+    border-radius:10px;
+    font-family: Montserrat;
+}
+.one {
+    border-radius: 5px 0 0 0;
+  }
+.three {
+    border-radius: 0 5px 0 0;
+}
+table, th, td {
+  font-weight: bold;
+  border-collapse: collapse;
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+th {
+    background-color: rgb(26, 177, 169);
+    color:white;
+    font-family: MontserratH;
+}
+.submit {
+    background-color: rgb(49, 199, 245);
+    border:none;
+    width: 12%;
+    height:40px;
+    border-radius: 5px;
+    outline: 0;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
+    position: relative;
+    top:9px;
+}
+.submit:hover{
+    cursor: pointer;
+    background-color: rgb(34, 166, 206);
+}
+.submit::-moz-focus-inner {
+    border: 0;
+  }
+.url {
+    font-family: Montserrat;
+    font-weight:bolder;
+    text-align: center;
+    border: 1px solid rgb(49, 199, 245);
+    border-radius: 5px;
+    height:40px;
+    width: 65%;
+}
+.url::placeholder{
+    color:rgb(0, 140, 255);
+}
+.url:invalid {
+    box-shadow: none;
+}
+.url:focus {
+    transform: scale(1.02)
+}

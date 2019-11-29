@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Shorten your URL
+        </title>
+        <link rel = "stylesheet" href = "{{url_for('static', filename = 'css/add.css')}}" />
+    </head>
+    <body>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+                <div class="alert" role="alert">
+                {{message}}
+                </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        <h1>SHORT URL GENERATOR</h1>
+        <form action="{{ url_for('short.add_link') }}" method = "POST">
+        <input type="text" class="url" name = "Original_URL" value = {{Original_URL}}  required/><br />
+        <input type = "submit" value = "Shorten!"  class = "submit"/>
+        </form><br /><br />
+        <h2>Original URL</h2>
+        <input type = "text" class = 'url' value = {{Original_URL}} />
+        <h2>Shortened URL</h2>
+        <input type = "text" class = 'url' value = {{ url_for('short.redirect_to_url', Short_URL=new_link, _external=True) }} /><br />
+        <input type = "button" value = "Home"  class = "Logs" onclick = "href = location.pathname = '/'" /><br />
+        <input type = "button" value = "Logs"  class = "Home" onclick = "href = location.pathname = '/logs'" />
+    </body>
+
+</html>

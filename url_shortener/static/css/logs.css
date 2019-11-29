@@ -1,0 +1,98 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./font/Montserrat-Hairline.otf);
+  }
+@font-face {
+  font-family: MontserratH;
+   src: url(./font/Montserrat-UltraLight.otf);
+}
+  
+  body {
+      text-align: center;
+  }
+  h1 {
+      font-family: Montserrat;
+      top:30px;
+      position: relative;
+      color:rgb(10, 107, 110);
+  }
+  .alert {
+    color:rgb(71, 197, 88);
+    font-family: Montserrat;
+    font-weight:bolder;
+    font-size: 20px;
+}
+  table{
+      position: relative;
+      left:16.5%;
+      margin-top:20px;
+      font-weight: 700;
+      width:69%;
+      table-layout: fixed;
+      word-wrap: break-word;
+      font-family: Montserrat;
+  }
+  th {
+    background-color: rgb(26, 177, 169);
+    color:white;
+    font-weight: bold;
+    font-family: MontserratH;
+}
+  table, th, td {
+    border-collapse: collapse;
+    border-bottom: 1px solid rgb(219, 219, 219);
+  }
+  .one {
+    border-radius: 10px 0 0 0;
+  }
+  .last {
+    border-radius: 0 10px 0 0;
+  }
+  .logout {
+    background-color: rgb(49, 199, 245);
+    border:none;
+    width: 12%;
+    height:40px;
+    border-radius: 5px;
+    outline: 0;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    right:6%;
+}
+p {
+  display: flexbox;
+  position: sticky;
+    position: -webkit-sticky;
+    top:20px;
+}
+.logout:hover{
+    cursor: pointer;
+    background-color: rgb(34, 166, 206);
+}
+.logout::-moz-focus-inner {
+    border: 0;
+  }
+.url {
+    text-align: center;
+}
+
+.Home {
+  background-color: rgb(49, 199, 245);
+  border:none;
+  width: 12%;
+  height:40px;
+  border-radius: 5px;
+  outline: 0;
+  color: rgb(255, 255, 255);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+  left:6%;
+}
+.Home:hover{
+  cursor: pointer;
+  background-color: rgb(34, 166, 206);
+}
+.Home::-moz-focus-inner {
+  border: 0;
+}

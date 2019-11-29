@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           Stats
+        </title>
+        <link rel = "stylesheet" href = "{{url_for('static', filename = 'css/logs.css')}}"
+    </head>
+    <body>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+                <div class="alert" style = "color: rgb(23, 168, 23)" role="alert">
+                {{message}}
+                </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        <h1>LOGS</h1>
+        <p><input type = "submit" value = "Logout"  class = "logout" onclick = "href = location.pathname = '/login'" style="float: left; margin-left: 10%" />
+        <input type = "submit" value = "Home"  class = "Home" onclick = "href = location.pathname = '/'" style="float: right; margin-right: 8%" /></p><br /><br />
+    <table cellpadding = "10">
+        <tr>
+            <th style="width: 3%" class = 'one'>ID</th>
+            <th style="width: 40%">Original URL</th>
+            <th style="width: 35%">Shortened URL</th>
+            <th style="width: 6%">Clicks</th>
+            <th style="width: 16%" class ='last'>Creation Date/Time</th>
+        </tr>
+        {% for link in links %}
+        <tr>
+            <td>{{link.id}}</td>
+            <td>{{link.Original_URL}}</td>
+            <td>{{ url_for('short.redirect_to_url', Short_URL=link.Short_URL, _external=True) }}</td>
+            <td>{{link.Clicks}}</td>
+            <td>{{link.Date_Created}}</td>
+        </tr>
+        {% endfor %}
+</table>
+    </body>
+
+</html>

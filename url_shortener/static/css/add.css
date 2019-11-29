@@ -1,0 +1,100 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./font/Montserrat-Hairline.otf);
+  }
+
+body {
+    text-align: center;
+}
+h1, h2 {
+    font-family: Montserrat;
+    color:rgb(10, 107, 110);
+}
+
+
+.alert {
+    color:rgb(71, 197, 88);
+    font-family: Montserrat;
+    font-weight:bolder;
+}
+
+.submit {
+    background-color: rgb(49, 199, 245);
+    border:none;
+    width: 12%;
+    height:40px;
+    border-radius: 5px;
+    outline: 0;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
+    margin-left:18%;
+    position: relative;
+    top:9px;
+}
+.submit:hover{
+    cursor: pointer;
+    background-color: rgb(34, 166, 206);
+}
+.submit::-moz-focus-inner {
+    border: 0;
+  }
+
+.url {
+    font-family: Montserrat;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid rgb(49, 199, 245);
+    border-radius: 5px;
+    height:40px;
+    width: 52%;
+}
+.url::placeholder{
+    color:rgb(0, 140, 255);
+}
+.url:invalid {
+    box-shadow: none;
+}
+.url:focus {
+    transform: scale(1.02)
+}
+
+.Logs {
+    background-color: rgb(49, 199, 245);
+    border:none;
+    width: 12%;
+    border-radius: 5px;
+    outline: 0;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    bottom:296px;
+    height:40px;
+    margin-right:16%;
+}
+.Logs:hover{
+    cursor: pointer;
+    background-color: rgb(34, 166, 206);
+}
+.Logs::-moz-focus-inner {
+    border: 0;
+}
+
+.Home {
+    background-color: rgb(49, 199, 245);
+    border:none;
+    width: 12%;
+    height:40px;
+    border-radius: 5px;
+    outline: 0;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Home:hover{
+    cursor: pointer;
+    background-color: rgb(34, 166, 206);
+}
+.Home::-moz-focus-inner {
+    border: 0;
+}

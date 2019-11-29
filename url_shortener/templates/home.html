@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Shorten your URL
+        </title>
+        <link rel = "stylesheet" href = "{{url_for('static', filename = 'css/home.css')}}"
+    </head>
+    <body>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+                <div class="alert" role="alert">
+                {{message}}
+                </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            
+        <h1>SHORT URL GENERATOR</h1>
+        <form action="{{ url_for('short.add_link') }}" method = "POST">
+        <input type="text" class="url" name = "Original_URL" placeholder="Enter the URL" required/><br />
+        <input type = "submit" value = "Shorten!"  class = "submit"/>
+        </form><br /><br />
+        {% if links.count() != 0 %}
+        <h2>Recent Requests</h2>
+        <table cellpadding = "11">
+            <tr>
+                <th style="width: 45%" class = 'one'>Original URL</th>
+                <th style="width: 35%" class = 'two'>Shortened URL</th>
+                <th style="width: 20%" class = 'three'>Request Date</th>
+            </tr>
+            {% if links.count() >= 5 %}
+            {% for i in range(5) %}
+            <tr>
+                <td>{{links[i].Original_URL}}</td>
+                <td>{{ url_for('short.redirect_to_url', Short_URL=links[i].Short_URL, _external=True) }}</td>
+                <td>{{links[i].Date_Created}}</td>                       
+            </tr>
+            {% endfor %}
+            {% elif links.count() != 0 %}
+
+            {% for i in range(links.count()) %}
+            <tr>
+                <td>{{links[i].Original_URL}}</td>
+                <td>{{ url_for('short.redirect_to_url', Short_URL=links[i].Short_URL, _external=True) }}</a></td>
+                <td>{{links[i].Date_Created}}</td>                       
+            </tr>
+            {% endfor %}
+            {% endif %}
+            {% endif %}
+        </table>
+    </body>
+
+</html>
